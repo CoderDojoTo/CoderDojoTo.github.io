@@ -1,4 +1,3 @@
 theme: jekyll-theme-hacker
-plugins:
-  - accordion
-  - collapsible
+title: CoderDojo Toronto Learner Profile
+description: Here's what I learned at CoderDojo!

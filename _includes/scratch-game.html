@@ -1,5 +1,11 @@
-<div style="text-align: center">
-  <iframe allowtransparency="true" width="728" height="603"
-    src="https://scratch.mit.edu/projects/{{ include.code }}/embed" frameborder="0" allow="fullscreen">
-  </iframe>
+<div style="display: flex;">
+  <div>
+    <iframe allowtransparency="true" width="728" height="603"
+      src="https://scratch.mit.edu/projects/{{ include.code }}/embed" frameborder="0" allow="fullscreen">
+    </iframe>
+  </div>
+  <div style="margin-left: 20px;">
+    <h2>{{ include.title}}</h2>
+    <p>{{ include.description }}</p>
+  </div>
 </div>

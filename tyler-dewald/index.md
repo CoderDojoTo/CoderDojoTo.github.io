@@ -1,22 +1,12 @@
-# Tyler Dewald
-## Round 2
-{% accordion a-unique-id %}
-  {% collapsible Title of a Collapsible %}
-    First collapsible content.
-  {% endcollapsible %}
-
-  {% collapsible A Second Collapsible %}
-    # Second
-
-    collapsible content
-  {% endcollapsible %}
-
-  {% collapsible Another One? %}
-    Third collapsible content.
-    1. Which
-    2. is
-    3. markdown
-  {% endcollapsible %}
-{% endaccordion %}
-
-{% include scratch-game.html code=290089503 %}
+---
+layout: profile
+learner_name: Tyler Dewald
+events: [
+  {
+    date: 2019-03-14,
+    code: 290089503,
+    title: "International Women's Day Project",
+    description: "A collection of women throughout history sprites to remix into your own story"
+  }
+]
+---

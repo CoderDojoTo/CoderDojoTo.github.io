@@ -1,0 +1,13 @@
+<div id="container">
+  {% for event in include.events %}
+  <div class="accordion">
+    <label for="t-{{ forloop.index }}" class="accordionitem">
+      <h2>{{ event.date }} <span class="arrow">»</span></h2>
+    </label>
+    <input type="checkbox" id="t-{{ forloop.index }}" />
+    <section class="hidden">
+      {% include scratch-game.html code=event.code title=event.title description=event.description %}
+    </section>
+  </div>
+  {% endfor %}
+</div>
