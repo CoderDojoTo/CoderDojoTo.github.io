@@ -1,11 +1,12 @@
 $hacker-green: #b5e853;
 
-#container {
+#accordion-container {
   height: auto;
   border-top: 1px solid $hacker-green;
   border-left: 1px solid $hacker-green;
   border-right: 1px solid $hacker-green;
 }
+
 .accordion label {
   display:block;
   padding: 10px;
