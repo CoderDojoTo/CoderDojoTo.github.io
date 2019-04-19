@@ -1,6 +1,5 @@
 ---
 layout: profile
-learner_name: Sahib Prihar
 events: [
   {
     subtitle: Earth Day Event,

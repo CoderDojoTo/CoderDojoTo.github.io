@@ -1,6 +1,5 @@
 ---
 layout: profile
-learner_name: Marcus Yang
 events: [
   {
     subtitle: Earth Day Event,

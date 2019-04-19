@@ -1,6 +1,5 @@
 ---
 layout: profile
-learner_name: Tyler Dewald
 events: [
   {
     subtitle: International Women's Day Event,

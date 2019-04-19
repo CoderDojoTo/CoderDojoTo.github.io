@@ -1,6 +1,5 @@
 ---
 layout: profile
-learner_name: Kieran Mcgeachy
 events: [
   {
     subtitle: Earth Day Event,

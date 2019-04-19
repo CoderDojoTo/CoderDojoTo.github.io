@@ -1,6 +1,5 @@
 ---
 layout: profile
-learner_name: Ryan Wang
 events: [
   {
     subtitle: Earth Day Event,
