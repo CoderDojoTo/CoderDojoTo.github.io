@@ -2,11 +2,18 @@
   {% for event in include.events %}
   <div class="accordion">
     <label for="t-{{ forloop.index }}" class="accordionitem">
-      <h2>{{ event.date }} <span class="arrow">»</span></h2>
+      <h2>
+        {{ event.date | date: '%B %d, %Y' }} - {{ event.subtitle }}
+        <span class="arrow">»</span>
+      </h2>
     </label>
     <input type="checkbox" id="t-{{ forloop.index }}" />
     <section class="hidden">
-      {% include scratch-game.html code=event.code title=event.title description=event.description %}
+      {% if event.type == "scratch" %}
+        {% include scratch-game.html code=event.code title=event.title description=event.description %}
+      {% elsif event.type == "python" %}
+        {% include python-project.html code=event.code title=event.title description=event.description %}
+      {% endif %}
     </section>
   </div>
   {% endfor %}
