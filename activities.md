@@ -9,7 +9,8 @@ activities: [
     topics: [
       "Python"
     ],
-    difficulty: 1
+    difficulty: 1,
+    source: "Raspberry Pi Projects"
   },
   {
     url: "https://projects.raspberrypi.org/en/projects/turtle-snowflakes",
@@ -19,7 +20,8 @@ activities: [
     topics: [
       "Python"
     ],
-    difficulty: 2
+    difficulty: 2,
+    source: "Raspberry Pi Projects"
   },
   {
     url: "https://projects.raspberrypi.org/en/projects/shakespearean-insult-generator",
@@ -29,7 +31,8 @@ activities: [
     topics: [
       "Python"
     ],
-    difficulty: 2
+    difficulty: 2,
+    source: "Raspberry Pi Projects"
   }
 ]
 ---
