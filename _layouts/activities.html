@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<script src="https://kit.fontawesome.com/0053233be3.js"></script>
+<div class="card-container">
+  {% for activity in page.activities %}
+  <span class="activity-card">
+    <a class="card-link" href="{{ activity.url }}">
+      <img src="{{ activity.image }}" />
+      <div class="card-body">
+        <div class="card-info">
+          {% include topic-section.html topics=activity.topics %}
+          {% include difficulty-section.html difficulty=activity.difficulty %}
+        </div>
+        <span class="card-heading">{{ activity.title }}</span>
+        <p>{{ activity.description }}</p>
+      </div>
+    </a>
+  </span>
+  {% endfor %}
+</div>

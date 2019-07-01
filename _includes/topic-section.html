@@ -1,0 +1,8 @@
+<div>
+  {% for topic in include.topics %}
+  {% case topic %}
+  {% when "Python" %}
+  <i class="fab fa-python"></i>
+  {% endcase %}
+  {% endfor %}
+</div>
