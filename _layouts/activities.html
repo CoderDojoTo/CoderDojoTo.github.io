@@ -2,13 +2,20 @@
 layout: default
 ---
 <script src="https://kit.fontawesome.com/0053233be3.js"></script>
-<div>
-  {% include topic-filter.html activities=page.activities %}
+<div class="filter-container">
+  {% include card-filter.html type="topics" activities=page.activities %}
+  {% include card-filter.html type="difficulty" activities=page.activities %}
+  {% include card-filter.html type="source" activities=page.activities %}
 </div>
 <div class="card-container">
   {% for activity in page.activities %}
-  <span class="activity-card" data-topics={{ activity.topics | join: "," }}>
-    <a class="card-link" href="{{ activity.url }}">
+  <span
+    class="activity-card"
+    data-topics={{ activity.topics | join: "," }}
+    data-difficulty={{ activity.difficulty }}
+    data-source={{ activity.source }}
+  >
+    <a class="card-link" href="{{ activity.url }}" target="_blank">
       <div class="card-image">
         <img src="{{ activity.image }}" />
       </div>
