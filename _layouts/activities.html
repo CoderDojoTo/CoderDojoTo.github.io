@@ -2,11 +2,16 @@
 layout: default
 ---
 <script src="https://kit.fontawesome.com/0053233be3.js"></script>
+<div>
+  {% include topic-filter.html activities=page.activities %}
+</div>
 <div class="card-container">
   {% for activity in page.activities %}
-  <span class="activity-card">
+  <span class="activity-card" data-topics={{ activity.topics | join: "," }}>
     <a class="card-link" href="{{ activity.url }}">
-      <img src="{{ activity.image }}" />
+      <div class="card-image">
+        <img src="{{ activity.image }}" />
+      </div>
       <div class="card-body">
         <div class="card-info">
           {% include topic-section.html topics=activity.topics %}

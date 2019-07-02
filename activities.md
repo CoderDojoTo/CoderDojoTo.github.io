@@ -13,9 +13,20 @@ activities: [
     source: "Raspberry Pi Projects"
   },
   {
+    url: "https://projects.raspberrypi.org/en/projects/storytime",
+    image: "https://projects-static.raspberrypi.org/projects/storytime/0e278a8862f95555ea1574a54c2fd7de1680b09e/en/images/banner.png",
+    title: "Story Time",
+    description: "Create interactive fairy tales and other stories with basic Python.",
+    topics: [
+      "Python"
+    ],
+    difficulty: 1,
+    source: "Raspberry Pi Projects"
+  }, 
+  {
     url: "https://projects.raspberrypi.org/en/projects/turtle-snowflakes",
     image: "https://projects-static.raspberrypi.org/projects/turtle-snowflakes/d58d29165caba7db4ca353ad1a6a00c5d67555c2/en/images/banner.png",
-    title: "Turtle snowflakes",
+    title: "Turtle Snowflakes",
     description: "Write code to draw snowflakes with Python Turtle.",
     topics: [
       "Python"
@@ -24,15 +35,15 @@ activities: [
     source: "Raspberry Pi Projects"
   },
   {
-    url: "https://projects.raspberrypi.org/en/projects/shakespearean-insult-generator",
-    image: "https://projects-static.raspberrypi.org/projects/shakespearean-insult-generator/b319c2ad19c1748fc7ac853345da3e2368de3d35/en/images/banner.png",
-    title: "Shakespearean insult generator",
-    description: "In this resource you will write a Python script to generate insults, Elizabethan-style.",
+    url: "https://github.com/CoderDojoTo/lessons/blob/master/1_scratch/4_scratch_starterGame_easy.pdf",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Scratch_Cat.png/200px-Scratch_Cat.png",
+    title: "Making a Basic Scratch Game",
+    description: "Make a basic game, grab the cake and avoid the baddies!",
     topics: [
-      "Python"
+      "Scratch"
     ],
-    difficulty: 2,
-    source: "Raspberry Pi Projects"
+    difficulty: 1,
+    source: "CoderDojo Toronto"
   }
 ]
 ---
