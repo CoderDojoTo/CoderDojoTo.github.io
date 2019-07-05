@@ -22,7 +22,7 @@ activities: [
     ],
     difficulty: 1,
     source: "Raspberry Pi Projects"
-  }, 
+  },
   {
     url: "https://projects.raspberrypi.org/en/projects/turtle-snowflakes",
     image: "https://projects-static.raspberrypi.org/projects/turtle-snowflakes/d58d29165caba7db4ca353ad1a6a00c5d67555c2/en/images/banner.png",
@@ -35,14 +35,69 @@ activities: [
     source: "Raspberry Pi Projects"
   },
   {
-    url: "https://github.com/CoderDojoTo/lessons/blob/master/1_scratch/4_scratch_starterGame_easy.pdf",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Scratch_Cat.png/200px-Scratch_Cat.png",
+    url: "https://coderdojo-to.s3.amazonaws.com/lessons/Scratch+Basic+Game.pdf",
+    image: "https://coderdojo-to.s3.amazonaws.com/images/scratch-basic-game.jpg",
     title: "Making a Basic Scratch Game",
-    description: "Make a basic game, grab the cake and avoid the baddies!",
+    description: "Make a basic game in Scratch. Grab the cake and avoid the baddies!",
     topics: [
       "Scratch"
     ],
     difficulty: 1,
+    source: "CoderDojo Toronto"
+  },
+  {
+    url: "https://coderdojo-to.s3.amazonaws.com/lessons/Scratch+Cat+and+Mouse+Game.pdf",
+    image: "https://coderdojo-to.s3.amazonaws.com/images/scratch-cat-and-mouse.jpg",
+    title: "Cat and Mouse",
+    description: "Move your mouse through the maze to get the cheese. Don't get caught by that cat!",
+    topics: [
+      "Scratch"
+    ],
+    difficulty: 2,
+    source: "CoderDojo Toronto"
+  },
+  {
+    url: "https://coderdojo-to.s3.amazonaws.com/lessons/Scratch+Clay+Shooting+Game.pdf",
+    image: "https://coderdojo-to.s3.amazonaws.com/images/scratch-clay-shooting.jpg",
+    title: "Clay Shoot",
+    description: "Build a target shooting game in Scratch",
+    topics: [
+      "Scratch"
+    ],
+    difficulty: 3,
+    source: "CoderDojo Toronto"
+  },
+  {
+    url: "https://coderdojo-to.s3.amazonaws.com/lessons/Scratch+Driving+Game.pdf",
+    image: "https://coderdojo-to.s3.amazonaws.com/images/scratch-driving-game.jpg",
+    title: "Driving Game",
+    description: "Race your car around the track. Try making a two-player game!",
+    topics: [
+      "Scratch"
+    ],
+    difficulty: 1,
+    source: "CoderDojo Toronto"
+  },
+  {
+    url: "https://coderdojo-to.s3.amazonaws.com/lessons/Scratch+Moon+Landing+Game.pdf",
+    image: "https://coderdojo-to.s3.amazonaws.com/images/scratch-moon-landing.jpg",
+    title: "Moon Lander",
+    description: "Can you land your moon lander spafely?",
+    topics: [
+      "Scratch"
+    ],
+    difficulty: 3,
+    source: "CoderDojo Toronto"
+  },
+  {
+    url: "https://coderdojo-to.s3.amazonaws.com/lessons/Scratch+Room+Escape+Game.pdf",
+    image: "https://coderdojo-to.s3.amazonaws.com/images/scratch-room-escape.jpg",
+    title: "Room Escape",
+    description: "Can you solve all the puzzles and escape the room?",
+    topics: [
+      "Scratch"
+    ],
+    difficulty: 2,
     source: "CoderDojo Toronto"
   }
 ]
