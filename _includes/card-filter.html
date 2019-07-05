@@ -1,7 +1,7 @@
 {% assign all_types = include.activities | map: include.type | uniq %}
-<div>
+<div class="filter-container">
   <label for="{{ include.type }}-select">{{ include.type | capitalize }}:</label>
-  <select id="{{ include.type }}-select" name={{ include.type }}>
+  <select id="{{ include.type }}-select" class="filter" name={{ include.type }}>
     <option value="">All</option>
     {% for type in all_types %}
       <option value={{ type }}>{{ type }}</option>
