@@ -1,11 +1,13 @@
 ---
 layout: default
+checked_types: [{ checked: "Yes" }, { checked: "No" }]
 ---
 <script src="https://kit.fontawesome.com/0053233be3.js"></script>
 <div class="filters-container">
   {% include card-filter.html type="topics" activities=page.activities %}
   {% include card-filter.html type="difficulty" activities=page.activities %}
   {% include card-filter.html type="source" activities=page.activities %}
+  {% include card-filter.html type="checked" activities=layout.checked_types %}
 </div>
 <div class="card-container">
   {% for activity in page.activities %}
@@ -14,7 +16,12 @@ layout: default
     data-topics={{ activity.topics | join: "," }}
     data-difficulty={{ activity.difficulty }}
     data-source={{ activity.source }}
+    data-checked="No"
   >
+    <label class="checkmark-container">
+      <input class="checkmark-input" type="checkbox"></input>
+      <span class="checkmark"></span>
+    </label>
     <a class="card-link" href="{{ activity.url }}" target="_blank">
       <div class="card-image">
         <img src="{{ activity.image }}" />
@@ -31,4 +38,5 @@ layout: default
     </a>
   </span>
   {% endfor %}
+  {% include checkmark-script.html %}
 </div>

@@ -1,0 +1,12 @@
+<script>
+  const checkboxes = Array.from(document.getElementsByClassName("checkmark-input"));
+
+  checkboxes.forEach(checkbox => {
+    checkbox.onclick = ({ target, path }) => {
+      const card = path[2];
+      const checked = target.checked;
+
+      card.dataset["checked"] = checked ? "Yes" : "No";
+    };
+  });
+</script>

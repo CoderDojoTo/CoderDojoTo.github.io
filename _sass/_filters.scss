@@ -6,13 +6,12 @@ $font-white: #eaeaea;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content: space-evenly;
 }
 
 .filter-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .filter-container select {
@@ -35,6 +34,7 @@ $font-white: #eaeaea;
   min-width: 150px;
   box-sizing: border-box;
   margin: 0;
+  margin-bottom: 20px;
   border: 1px solid $hacker-green;
   box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
   border-radius: .5em;
