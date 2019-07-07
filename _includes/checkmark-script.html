@@ -1,12 +1,28 @@
 <script>
   const checkboxes = Array.from(document.getElementsByClassName("checkmark-input"));
+  let checkedActivities = JSON.parse(window.localStorage.getItem("checkedActivities") || "[]");
 
   checkboxes.forEach(checkbox => {
+    if (checkedActivities.includes(checkbox.name)) {
+      checkbox.checked = true;
+      checkbox.parentNode.parentNode.dataset["checked"] = "Yes";
+    }
+
     checkbox.onclick = ({ target, path }) => {
+      checkedActivities = JSON.parse(window.localStorage.getItem("checkedActivities") || "[]");
       const card = path[2];
       const checked = target.checked;
 
       card.dataset["checked"] = checked ? "Yes" : "No";
+
+      const newData = checked
+        ? checkedActivities.concat(target.name)
+        : checkedActivities.filter(name => name !== target.name);
+
+      window.localStorage.setItem(
+        "checkedActivities",
+        JSON.stringify(newData)
+      );
     };
   });
 </script>

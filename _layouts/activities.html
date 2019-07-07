@@ -11,15 +11,10 @@ checked_types: [{ checked: "Yes" }, { checked: "No" }]
 </div>
 <div class="card-container">
   {% for activity in page.activities %}
-  <span
-    class="activity-card"
-    data-topics={{ activity.topics | join: "," }}
-    data-difficulty={{ activity.difficulty }}
-    data-source={{ activity.source }}
-    data-checked="No"
-  >
+  <span class="activity-card" data-topics={{ activity.topics | join: "," }} data-difficulty={{ activity.difficulty }}
+    data-source={{ activity.source }} data-checked="No">
     <label class="checkmark-container">
-      <input class="checkmark-input" type="checkbox"></input>
+      <input class="checkmark-input" type="checkbox" name="{{ activity.title }}"></input>
       <span class="checkmark"></span>
     </label>
     <a class="card-link" href="{{ activity.url }}" target="_blank">
