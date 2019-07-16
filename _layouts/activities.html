@@ -1,7 +1,9 @@
 ---
 layout: default
 checked_types: [{ checked: "Yes" }, { checked: "No" }]
+groups_awaiting_approval: ["MIT App Inventor", "HotPopRobot.com", "Programming Basics"]
 ---
+{% assign grouped_activities = page.activities | group_by: "source" | sort: "name" %}
 <script src="https://kit.fontawesome.com/0053233be3.js"></script>
 <div class="filters-container">
   {% include card-filter.html type="topics" activities=page.activities %}
@@ -10,28 +12,40 @@ checked_types: [{ checked: "Yes" }, { checked: "No" }]
   {% include card-filter.html type="checked" activities=layout.checked_types %}
 </div>
 <div class="card-container">
-  {% for activity in page.activities %}
-  <span class="activity-card" data-topics={{ activity.topics | join: "," }} data-difficulty={{ activity.difficulty }}
-    data-source={{ activity.source }} data-checked="No">
-    <label class="checkmark-container">
-      <input class="checkmark-input" type="checkbox" name="{{ activity.title }}"></input>
-      <span class="checkmark"></span>
-    </label>
-    <a class="card-link" href="{{ activity.url }}" target="_blank">
-      <div class="card-image">
-        <img src="{{ activity.image }}" />
-      </div>
-      <div class="card-body">
-        <div class="card-info">
-          {% include topic-section.html topics=activity.topics %}
-          {% include difficulty-section.html difficulty=activity.difficulty %}
-        </div>
-        <span class="card-heading">{{ activity.title }}</span>
-        <p>{{ activity.description }}</p>
-        <p class="card-source">{{ activity.source }}</p>
-      </div>
-    </a>
-  </span>
+  {% for group in grouped_activities %}
+    {% if layout.groups_awaiting_approval contains group.name %}
+      {% continue %}
+    {% endif %}
+    <h2 class="card-group">{{ group.name }}</h2>
+    {% assign activities = group.items | sort: "title" %}
+    {% for activity in activities %}
+      <span
+        class="activity-card"
+        data-topics={{ activity.topics | join: "," }}
+        data-difficulty={{ activity.difficulty }}
+        data-source={{ activity.source }}
+        data-checked="No"
+      >
+        <label class="checkmark-container">
+          <input class="checkmark-input" type="checkbox" name="{{ activity.title }}"></input>
+          <span class="checkmark"></span>
+        </label>
+        <a class="card-link" href="{{ activity.url }}" target="_blank">
+          <div class="card-image">
+            <img src="{{ activity.image }}" />
+          </div>
+          <div class="card-body">
+            <div class="card-info">
+              {% include topic-section.html topics=activity.topics %}
+              {% include difficulty-section.html difficulty=activity.difficulty %}
+            </div>
+            <span class="card-heading">{{ activity.title }}</span>
+            <p>{{ activity.description }}</p>
+            <p class="card-source">{{ activity.source }}</p>
+          </div>
+        </a>
+      </span>
+    {% endfor %}
   {% endfor %}
   {% include checkmark-script.html %}
 </div>
