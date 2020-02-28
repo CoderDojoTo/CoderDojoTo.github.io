@@ -60,7 +60,7 @@ activities: [
     url: "https://coderdojo-to.s3.amazonaws.com/lessons/Scratch+Clay+Shooting+Game.pdf",
     image: "https://coderdojo-to.s3.amazonaws.com/images/scratch-clay-shooting.jpg",
     title: "Clay Shoot",
-    description: "Build a target shooting game in Scratch",
+    description: "Build a target shooting game in Scratch.",
     topics: [
       "Scratch"
     ],
@@ -170,7 +170,7 @@ activities: [
     url: "https://coderdojo-to.s3.amazonaws.com/lessons/Beginner+PHP.pdf",
     image: "https://coderdojo-to.s3.amazonaws.com/images/coderdojo-logo.png",
     title: "Beginner PHP",
-    description: "Learn how to write websites in PHP",
+    description: "Learn how to write websites in PHP.",
     topics: [
       "PHP"
     ],
@@ -203,7 +203,7 @@ activities: [
     url: "https://coderdojo-to.s3.amazonaws.com/lessons/Arduino+with+LED+Faceplate.pdf",
     image: "https://coderdojo-to.s3.amazonaws.com/images/coderdojo-logo.png",
     title: "Arduino and LED Faceplate",
-    description: "Create your own stopwatch with LED display using the Arduino programable circuit board",
+    description: "Create your own stopwatch with LED display using the Arduino programable circuit board.",
     topics: [
       "Arduino"
     ],
@@ -330,6 +330,17 @@ activities: [
     ],
     difficulty: 4,
     source: "Raspberry Pi Projects"
-  }
+  },
+  {
+    url: "https://docs.google.com/document/d/1OquQcRMM14G-xCUhS2QBOqJfAT0uv48A_UojNoNR8pE/edit?usp=sharing",
+    image: "https://coderdojo-to.s3.amazonaws.com/images/raspberry-pi-emulator.jpg",
+    title: "Raspberry Pi Emulator",
+    description: "Learn how to build a legal Raspberry Pi game emulator.",
+    topics: [
+      "Raspberry Pi"
+    ],
+    difficulty: 4,
+    source: "CoderDojo Toronto"
+  },
 ]
 ---
