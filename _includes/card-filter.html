@@ -1,0 +1,33 @@
+{% assign all_types = include.activities | map: include.type | uniq %}
+<div class="filter-container">
+  <label for="{{ include.type }}-select">{{ include.type | capitalize }}:</label>
+  <select id="{{ include.type }}-select" class="filter" name={{ include.type }}>
+    <option value="">All</option>
+    {% for type in all_types %}
+      <option value={{ type }}>{{ type }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<script>
+  var selectors = Array.from(document.getElementsByTagName("select"));
+
+  selectors.forEach(selector => {
+    selector.oninput = () => {
+      const values = selectors.reduce((obj, { name, value }) => {
+        obj[name] = value;
+        return obj
+      }, {});
+      const cards = Array.from(document.getElementsByClassName("activity-card"));
+
+      cards.forEach(card => {
+        const showing = Object.keys(values).every(type => !values[type] || card.dataset[type] === values[type]);
+        if (showing) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    };
+  });
+</script>

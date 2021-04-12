@@ -1,0 +1,41 @@
+$hacker-green: #b5e853;
+
+#accordion-container {
+  height: auto;
+  border-top: 1px solid $hacker-green;
+  border-left: 1px solid $hacker-green;
+  border-right: 1px solid $hacker-green;
+}
+
+.accordion label {
+  display:block;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid $hacker-green;
+  border-top: 1px solid $hacker-green;
+}
+
+.accordion section {
+  margin: 0;
+  padding: 10px;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  border-bottom: 1px solid $hacker-green;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  text-align: left;
+}
+
+@for $i from 1 through 20 {
+  #t-#{$i}:checked ~ .hidden {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  input#t-#{$i} {
+    display: none;
+    position: relative;
+  }
+}
